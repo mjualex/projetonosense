@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imagens/logofavi.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="imagens/Group 4.3.png" alt="logo" width="125px"></a>
+            </div>
+            <nav>
+                <ul id="MenuItems">   
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Departamentos</a></li>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="carrinho.html">Carrinho</a></li>                  
+                </ul>
+            </nav>
+            
+        </div>
+    </div>
+    
+    <div class="account-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                </div>
+                <div class="col-2">
+                    <div class="form-container">
+                        <div class="form-btn">
+                            <span onclick="login()">Minha Conta</span>
+                            <span onclick="register()">Criar Conta</span>
+                            <hr id="Indicator">
+                        </div>
+                        <form id="LoginForm">
+                            <input type="text" placeholder="Usuário">
+                            <input type="password" placeholder="Senha">
+                            <button type="submit" class="btn"><a href="perfil.html">Login</a></button>
+                            <a href="">Esqueci a senha</a>
+                        </form>
+
+                        <form id="RegForm">
+                            <input type="text" placeholder="Usuário">
+                            <input type="email" placeholder="Email">
+                            <input type="password" placeholder="Senha">
+                            <button type="submit" class="btn"></a>Cadastrar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Sobre</h3>
+                    <p>Conheça-nos</p>
+                    <p>Onde estamos</p>
+                    
+                </div>
+                <div class="footer-col-2">
+                    <h3>Suporte</h3>
+                    <ul>
+                      <li>FAQ
+                      <li>SAC: 0800 025 0537
+                </div>
+                <div class="footer-col-3">
+                    <h3>Dúvidas</h3>
+                    <ul>
+                        <li>Pagamento</li>
+                        <li>Contato</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Redes Sociais</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Instagram</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2023 - Equipe No Sense
+            </p>
+        </div>
+    
+
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px"
+            }
+            else {
+                MenuItems.style.maxHeight = "0px"
+            }
+        }
+    </script>
+
+    <!-- Toggle Form -->
+    <script>
+        var LoginForm = document.getElementById("LoginForm");
+        var RegForm = document.getElementById("RegForm");
+        var Indicator = document.getElementById("Indicator");
+        function register() {
+            RegForm.style.transform = "translatex(0px)";
+            LoginForm.style.transform = "translatex(0px)";
+            Indicator.style.transform = "translateX(100px)";
+
+        }
+        function login() {
+            RegForm.style.transform = "translatex(300px)";
+            LoginForm.style.transform = "translatex(300px)";
+            Indicator.style.transform = "translate(0px)";
+
+        }
+    </script>
+
+</body>
+
+</html>
